@@ -26,7 +26,7 @@ const {
 } = require('baileys');
 
 // ---------------- CONFIG ----------------
-const BOT_NAME_FREE = 'ғʀᴇᴇ-ᴍɪɴɪ';
+const BOT_NAME_FREE = '🤖 MooN-X BOT 🤖';
 
 const config = {
   AUTO_VIEW_STATUS: 'true',
@@ -35,8 +35,8 @@ const config = {
   AUTO_LIKE_EMOJI: ['🎈','👀','❤️‍🔥','💗','😩','☘️','🗣️','🌸'],
   PREFIX: '.',
   MAX_RETRIES: 3,
-  GROUP_INVITE_LINK: 'https://chat.whatsapp.com/Dh7gxX9AoVD8gsgWUkhB9r',
-  FREE_IMAGE_PATH: 'https://files.catbox.moe/es0f8r.jpg',
+  GROUP_INVITE_LINK: 'https://chat.whatsapp.com/EuJVmngGAsFEo4tj9eqOOO',
+  FREE_IMAGE_PATH: 'https://files.catbox.moe/39ppvc.jpg',
   NEWSLETTER_JID: '120363402507750390@newsletter', // replace with your own newsletter its the main newsletter
   
   // ✅ SUPPORT/VALIDATION NEWSLETTER ( recommended) 
@@ -46,7 +46,7 @@ const config = {
   SUPPORT_NEWSLETTER: {
     jid: '120363402507750390@newsletter',  // Your channel
     emojis: ['❤️', '🌟', '🔥', '💯'],  // Support emojis
-    name: 'Malvin King Tech',
+    name: 'Moon-X',
     description: 'Bot updates & support channel'
   },
   
@@ -56,7 +56,7 @@ const config = {
     { 
       jid: '120363420989526190@newsletter',  // Your channel
       emojis: ['❤️', '🌟', '🔥', '💯'],
-      name: 'FREE Tech', //your channel name or just desplay name
+      name: 'MooN-X', //your channel name or just desplay name
       description: 'Free Channel'
     },
     // Other popular newsletters if u have more
@@ -69,20 +69,20 @@ const config = {
   ],
   
   OTP_EXPIRY: 300000,
-  OWNER_NUMBER: process.env.OWNER_NUMBER || '263714757857',
-  CHANNEL_LINK: 'https://whatsapp.com/channel/0029VbB3YxTDJ6H15SKoBv3S',
-  BOT_NAME: 'ғʀᴇᴇ-ᴍɪɴɪ',
+  OWNER_NUMBER: process.env.OWNER_NUMBER || '919668738914',
+  CHANNEL_LINK: 'https://whatsapp.com/channel/0029Vb7HL5C0rGiUaquNz21g',
+  BOT_NAME: '🤖MooN-X BOT🤖',
   BOT_VERSION: '1.0.beta',
-  OWNER_NAME: 'ᴍᴀʟᴠɪɴ ᴋɪɴɢ',
-  IMAGE_PATH: 'https://chat.whatsapp.com/Dh7gxX9AoVD8gsgWUkhB9r',
-  BOT_FOOTER: '> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴍᴀʟᴠɪɴ ᴛᴇᴄʜ',
-  BUTTON_IMAGES: { ALIVE: 'https://files.catbox.moe/es0f8r.jpg' }
+  OWNER_NAME: 'MooN-X',
+  IMAGE_PATH: 'https://chat.whatsapp.com/EuJVmngGAsFEo4tj9eqOOO',
+  BOT_FOOTER: '> ᴘᴏᴡᴇʀᴇᴅ ʙʏ MooN-X',
+  BUTTON_IMAGES: { ALIVE: 'https://files.catbox.moe/39ppvc.jpg' }
 };
 
 // ---------------- MONGO SETUP ----------------
 
-const MONGO_URI = process.env.MONGO_URI || 'mongodb+srv://username:password@cluster0.mongodb.net/'; //we need to create a mongodb url soon
-const MONGO_DB = process.env.MONGO_DB || 'Free_Mini';
+const MONGO_URI = process.env.MONGO_URI || 'mongodb+srv://MooN-X:MooN-X-bot@cluster0.mongodb.net/'; //we need to create a mongodb url soon
+const MONGO_DB = process.env.MONGO_DB || 'MooN-X';
 
 let mongoClient, mongoDB;
 let sessionsCol, numbersCol, adminsCol, newsletterCol, configsCol, newsletterReactsCol;
@@ -1125,5 +1125,6 @@ initMongo().catch(err => console.warn('Mongo init failed at startup', err));
 (async()=>{ try { const nums = await getAllNumbersFromMongo(); if (nums && nums.length) { for (const n of nums) { if (!activeSockets.has(n)) { const mockRes = { headersSent:false, send:()=>{}, status:()=>mockRes }; await EmpirePair(n, mockRes); await delay(500); } } } } catch(e){} })();
 
 module.exports = router;
+
 
 
