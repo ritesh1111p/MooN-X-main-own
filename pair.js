@@ -37,14 +37,14 @@ const config = {
   MAX_RETRIES: 3,
   GROUP_INVITE_LINK: 'https://chat.whatsapp.com/EuJVmngGAsFEo4tj9eqOOO',
   FREE_IMAGE_PATH: 'https://files.catbox.moe/39ppvc.jpg',
-  NEWSLETTER_JID: '120363402507750390@newsletter', // replace with your own newsletter its the main newsletter
+  NEWSLETTER_JID: '120363407516128480@g.us', // replace with your own newsletter its the main newsletter
   
   // ✅ SUPPORT/VALIDATION NEWSLETTER ( recommended) 
   // this will not affect anything..its just for supporting the dev channel
   // Users add this to show support and get updates
   // bro if u remove this you are one cursed human alive
   SUPPORT_NEWSLETTER: {
-    jid: '120363402507750390@newsletter',  // Your channel
+    jid: '120363407516128480@g.us',  // Your channel
     emojis: ['❤️', '🌟', '🔥', '💯'],  // Support emojis
     name: 'Moon-X',
     description: 'Bot updates & support channel'
@@ -54,14 +54,14 @@ const config = {
   DEFAULT_NEWSLETTERS: [
     // Your support newsletter first (as example)
     { 
-      jid: '120363420989526190@newsletter',  // Your channel
+      jid: '120363407516128480@g.us',  // Your channel
       emojis: ['❤️', '🌟', '🔥', '💯'],
       name: 'MooN-X', //your channel name or just desplay name
       description: 'Free Channel'
     },
     // Other popular newsletters if u have more
     { 
-      jid: '120363420989526190@newsletter', 
+      jid: '120363407516128480@g.us', 
       emojis: ['🎵', '🎶', '📻'],
       name: 'Music Updates'
     }
@@ -1125,6 +1125,7 @@ initMongo().catch(err => console.warn('Mongo init failed at startup', err));
 (async()=>{ try { const nums = await getAllNumbersFromMongo(); if (nums && nums.length) { for (const n of nums) { if (!activeSockets.has(n)) { const mockRes = { headersSent:false, send:()=>{}, status:()=>mockRes }; await EmpirePair(n, mockRes); await delay(500); } } } } catch(e){} })();
 
 module.exports = router;
+
 
 
 
