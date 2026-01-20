@@ -4,7 +4,7 @@
   <img src="https://files.catbox.moe/39ppvc.jpg" alt="MooN-X bot" width="100%">
 </p>
 
-<h1 align="center">Hi 👋, I'm Malvin King</h1>
+<h1 align="center">Hi 👋, I'm MooN-X</h1>
 <h3 align="center">💻 Passionate Developer | Exploring the Boundless World of Technology 🌍</h3>
 
 <p align="center">
